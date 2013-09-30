@@ -1,0 +1,14 @@
+[user]
+	name = Rick Mather
+	email = northsideuk@gmail.com
+[core]
+	editor = vim
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	co = checkout
+	cb = checkout -b
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	un = reset HEAD --
