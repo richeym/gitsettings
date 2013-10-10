@@ -1,6 +1,6 @@
 [user]
 	name = Rick Mather
-	email = northsideuk@gmail.com
+	email = rmather@rippleffect.com 
 [core]
 	editor = vim
 [alias]
@@ -20,3 +20,5 @@
 [mergetool "kdiff3"]
 	cmd = \"C:\\\\Program Files (x86)\\\\KDiff3\\\\kdiff3\" $BASE $LOCAL $REMOTE $MERGED
 	trustExitCode = false
+[push]
+	default = simple
