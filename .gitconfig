@@ -12,13 +12,22 @@
 	st = status
 	unstage = reset HEAD --
 	un = reset HEAD --
-	mergetool = C:\\Program Files (x86)\\KDiff3\\kdiff3.exe
+	backout = reset --soft HEAD^1
+	merged = branch --merged
+	mergedr = branch -r --merged
+	unmerged = branch --no-merged
+	unmergedr = branch -r --no-merged
 [merge]
-	tool = kdiff3
-[mergetool]
-	keepBackup = false
+        tool = kdiff3
 [mergetool "kdiff3"]
-	cmd = \"C:\\\\Program Files (x86)\\\\KDiff3\\\\kdiff3\" $BASE $LOCAL $REMOTE $MERGED
+        path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+	keepBackup = false
 	trustExitCode = false
+[diff]
+        tool = kdiff3
+        guitool = kdiff3
+[difftool "kdiff3"]
+        path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+	cmd = \"C:\\\\Program Files (x86)\\\\KDiff3\\\\kdiff3\" $BASE $LOCAL $REMOTE $MERGED
 [push]
 	default = simple
