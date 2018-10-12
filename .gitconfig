@@ -1,15 +1,20 @@
 [user]
+# Please adapt and uncomment the following lines:
 	name = Rick Mather
-	email = xxxxxx
+	email = 
 [core]
 	editor = vim
 [alias]
 	co = checkout
+	cod = checkout develop
 	cb = checkout -b
 	br = branch
 	ci = commit
 	st = status
-	aa = "!git add . && git status" 
+	ps = push
+	pish = push
+	pl = pull
+	aa = "!git add --all && git status" 
 	unstage = reset HEAD -- 
 	un = reset HEAD -- 
 	dc = checkout -- # discard working changes
@@ -19,10 +24,17 @@
 	mergedr = branch -r --merged
 	unmerged = branch --no-merged
 	unmergedr = branch -r --no-merged
+	purge = "!git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
+
+	hide = update-index --assume-unchanged
+	unhide = update-index --no-assume-unchanged
+	hidden = "!git ls-files -v|grep '^h'"
 
 	filelog = log -u
 	fl = log -u
 	flog = log -u
+
+	files = diff-tree --no-commit-id --name-only -r 
 
 	# short log listing of commits and hashes
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
